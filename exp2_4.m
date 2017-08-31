@@ -1,0 +1,16 @@
+load('hall.mat')
+tile_origin=hall_color(1:80,1:80,:);
+tile_origin=int16(rgb2gray(tile_origin));%转换成灰度图像，并且转换成int支持正负数，16位防止溢出
+tile_dct=dct2(tile_origin);%离散余弦变换
+tile_dct_transpose=transpose(tile_dct);
+tile_transpose=idct2(tile_dct_transpose);
+tile_dct_90=rot90(tile_dct);
+tile_dct_180=rot90(tile_dct_90);
+tile=idct2(tile_dct);
+tile_90=idct2(tile_dct_90);
+tile_180=idct2(tile_dct_180);
+imshow(tile_origin,[0,255]);
+figure;imshow(tile,[0,255]);
+figure;imshow(tile_transpose,[0,255]);
+figure;imshow(tile_90,[0,255]);
+figure;imshow(tile_180,[0,255]);

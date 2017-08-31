@@ -1,0 +1,7 @@
+*.docx
+*.tmp
+Faces/
+*.docx
+*.mat
+*.png
+.DS_Store
