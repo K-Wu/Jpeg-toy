@@ -1,7 +1,11 @@
 *.docx
 *.tmp
 Faces/
+detection/
+report/
 *.docx
 *.mat
 *.png
+*.bmp
+*.jpg
 .DS_Store

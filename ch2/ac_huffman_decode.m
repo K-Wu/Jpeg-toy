@@ -57,5 +57,5 @@ while current_index<=code_length
 		last_index=current_index;%霍夫曼解码阶段，last_index指向霍夫曼头部前的一个元素的位置，在此设置
 		current_index=current_index+1;
 	end
-	array_index
+	%array_index
 end

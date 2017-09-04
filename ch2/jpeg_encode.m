@@ -9,6 +9,9 @@ for i=1:size(quantized_coef,2) %ac编码
 	accode_tot(current_index:next_index-1)=ac_code;
 	current_index=next_index;
 end
+accode_tot=logical(accode_tot);
+dc_code=logical(dc_code);
+
 
 function [dc_code,code_length]=encode_dc(dc_array,DCTAB)
 %输入整张图的(1,1)元素向量，输出DC编码

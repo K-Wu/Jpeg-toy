@@ -9,7 +9,7 @@ magnitude_array=zeros(1,0);
 array_index=1;
 while current_index<=code_length
 	%先霍夫曼解码，再解码magnitude
-	[current_index,last_index]
+	%[current_index,last_index]
 	[member_flag,huffman_index]=ismember(get_padding(dccode(last_index+1:current_index),MAX_HUFFMAN_LENGTH),huffman_dict,'rows');
 	if (member_flag==0) || ((current_index-last_index)~=DCTAB(huffman_index,1))%要判断编码长度是否与字典一致
 		current_index=current_index+1;
