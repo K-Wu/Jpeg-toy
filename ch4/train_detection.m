@@ -1,5 +1,5 @@
 function vect=train_detection(L,dev_index,equalize,isHistogram)
-%输出训练好的向量，L为每种颜色的编码长度。dev_index为dev集的index
+%输出训练好的向量，L为每种颜色的编码长度。dev_index为dev集的index不参与训练,equalize为是否亮度均衡，isHistogram计算的是直方图向量还是颜色向量
 
 
 num_img=0;%训练图片的数量，在for循环中累加

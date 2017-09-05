@@ -4,6 +4,7 @@ dev_index=[];
 L_hist=4;%直方图量化位数
 max_hist_dist=0.65;%直方图距离自定义阈值
 
+
 %训练向量
 %第二个参数为dev集，我们用上全部数据训练，所以是空集
 %第三个logical参数是否进行亮度均衡，作用为负所以关掉了
@@ -11,8 +12,12 @@ max_hist_dist=0.65;%直方图距离自定义阈值
 %face_vect=train_detection(L,dev_index,0,0);%训练颜色向量，如指导书所说；
 face_hist_vect=train_detection(L_hist,dev_index,0,1);%训练直方图向量，与训练颜色向量一样
 
-test_img_name='../detection/2.jpg';
-test_img=imread(test_img_name);
+test_img_name='../detection/6.jpg';
+test_img=imread(test_img_name)6
+%test_img=imrotate(test_img,270);%转90度
+%test_img=imresize(test_img,[size(test_img,1),2*size(test_img,2)]);%宽度扩大一倍
+test_img=test_img-70;%亮度减70
+
 
 %test_img=uint8(brightness_eq(test_img));%亮度均衡，关掉了
 %test_rgb_validity(test_img);%assert 亮度<=255
